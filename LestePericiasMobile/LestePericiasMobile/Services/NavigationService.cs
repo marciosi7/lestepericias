@@ -16,10 +16,10 @@ namespace LestePericiasMobile.Services
            await MainPage.Navigation.PushAsync(new Views.DashboardView());
         }
 
-        public Task NavigateToLogin()
+        public void NavigateToLogin()
         {
 
-            throw new NotImplementedException();
+            App.Current.MainPage = new Views.LoginView();
         }
 
         public void CleanStack()
@@ -33,6 +33,36 @@ namespace LestePericiasMobile.Services
                     MainPage.Navigation.RemovePage(page);
                 }
             }
+        }
+
+        public Task NavigateToNovasVistorias()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task NavigateToVistoriasFeitas()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task NavigateToFaleConosco()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task NavigateToFazerVistoria()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task NavigateToVistoriaDetail()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task NavigateToVistoriaFotoDetail()
+        {
+            throw new NotImplementedException();
         }
     }
 }

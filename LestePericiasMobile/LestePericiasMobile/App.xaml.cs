@@ -17,12 +17,6 @@ namespace LestePericiasMobile
         public App()
         {
             InitializeComponent();
-            UserInfo = new Models.UserInfoDTO()
-            {
-                IdUsuario = 1,
-                Nome = "Edson Arantes do Nascimento",
-                Username = "pelé"
-            };
             RegistrarDependencias();
             this.MainPage = new NavigationPage(new Views.LoginView());
         }
@@ -31,6 +25,7 @@ namespace LestePericiasMobile
         {
             DependencyService.Register<INavigationService, NavigationService>();
             DependencyService.Register<IMessageService, MessageService>();
+            DependencyService.Register<ILoginService, LoginService>();
         }
     }
 }

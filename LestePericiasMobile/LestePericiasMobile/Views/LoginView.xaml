@@ -5,7 +5,7 @@
  
  <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
     <Entry Placeholder="Usuário" Text="{Binding Login}" WidthRequest="200" />
-    <Entry Placeholder="Senha" Text="{Binding Senha}" WidthRequest="200"/>
+    <Entry Placeholder="Senha" Text="{Binding Senha}" WidthRequest="200" IsPassword="True"/>
     <Button Text="Login" WidthRequest="200" Command="{Binding TentaLogarCommand}" />
  </StackLayout>
 </ContentPage>

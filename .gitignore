@@ -1,0 +1,41 @@
+<a href="/search?Search=%23Autosave&amp;Mode=like">#Autosave</a> files
+*~
+
+<a href="/search?Search=%23build&amp;Mode=like">#build</a>
+[Oo]bj/
+[Bb]in/
+packages/
+TestResults/
+Components/
+
+# globs
+Makefile.in
+*.DS_Store
+*.sln.cache
+*.suo
+*.cache
+*.pidb
+*.userprefs
+*.usertasks
+config.log
+config.make
+config.status
+aclocal.m4
+install-sh
+autom4te.cache/
+*.user
+*.tar.gz
+tarballs/
+test-results/
+Thumbs.db
+
+<a href="/search?Search=%23Mac&amp;Mode=like">#Mac</a> bundle stuff
+*.dmg
+*.app
+
+<a href="/search?Search=%23resharper&amp;Mode=like">#resharper</a>
+*_Resharper.*
+*.Resharper
+
+<a href="/search?Search=%23dotCover&amp;Mode=like">#dotCover</a>
+*.dotCover

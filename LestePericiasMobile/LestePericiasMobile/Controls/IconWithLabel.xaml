@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LestePericiasMobile.Controls.IconWithLabel">
+
+  <StackLayout x:Name="innerStack"  Orientation="Vertical" HorizontalOptions="FillAndExpand">
+
+    <Image x:Name="TopIcon"
+           HorizontalOptions="Center"
+           Source="{Binding Icon}"
+           WidthRequest = "64"
+           HeightRequest = "64"/>
+
+    <Label x:Name="BottomLabel" LineBreakMode="WordWrap"
+         HorizontalOptions="FillAndExpand"
+         Text="{Binding Label}"
+         FontSize="Micro"
+             
+         TextColor="{StaticResource CorTextoNormal}"
+         XAlign="Center"/>
+
+  </StackLayout>
+
+</ContentView>
+
+

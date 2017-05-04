@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:components="clr-namespace:LestePericiasMobile.Controls;"
+             x:Class="LestePericiasMobile.Views.DashboardView">
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="80" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+
+
+    <StackLayout  Orientation="Horizontal" Grid.Row="0" Padding="10, 5, 10, 0" HorizontalOptions="FillAndExpand">
+        <Label Text="{Binding UserInfo.Nome, StringFormat='Bem vindo, {0:F0}'}" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{StaticResource CorTextoNormal}" />
+    </StackLayout>
+    <StackLayout  Grid.Row="1"
+                  HorizontalOptions="CenterAndExpand"
+                  VerticalOptions="StartAndExpand"
+                  Padding="0,5,0,0"
+                  Margin="10">
+
+        <Grid ColumnSpacing="30"
+              Grid.Row="0"
+              HorizontalOptions="Center"
+              Padding="0,10,0,0"
+              RowSpacing="15" VerticalOptions="Center">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
+
+          </Grid.ColumnDefinitions>
+          <components:IconWithLabel Grid.Row="0" Grid.Column="1" Icon="icone_vistorias_add.png" Label="Nova Vistoria"  >
+            <components:IconWithLabel.GestureRecognizers>
+              <TapGestureRecognizer Command="{Binding ToVistoriaCommand}" />
+            </components:IconWithLabel.GestureRecognizers>
+          </components:IconWithLabel>
+
+          <components:IconWithLabel Grid.Row="0" Grid.Column="2" Icon="icone_vistorias_feitas.png" Label="Vistorias Feitas"  >
+            <components:IconWithLabel.GestureRecognizers>
+              <TapGestureRecognizer Command="{Binding ToVistoriasFeitasCommand}" />
+            </components:IconWithLabel.GestureRecognizers>
+          </components:IconWithLabel>
+
+          <components:IconWithLabel Grid.Row="1" Grid.Column="1" Icon="icone_fale_conosco.png" Label="Fale Conosco"  >
+            <components:IconWithLabel.GestureRecognizers>
+              <TapGestureRecognizer Command="{Binding ToFaleConoscoCommand}" />
+            </components:IconWithLabel.GestureRecognizers>
+          </components:IconWithLabel>
+
+          <components:IconWithLabel Grid.Row="1" Grid.Column="2" Icon="icone_user.png" Label="Meus Dados"  >
+            <components:IconWithLabel.GestureRecognizers>
+              <TapGestureRecognizer Command="{Binding ToMeusDadosCommand}" />
+            </components:IconWithLabel.GestureRecognizers>
+          </components:IconWithLabel>
+
+        </Grid>
+    </StackLayout>
+  </Grid>
+</ContentPage>

@@ -41,24 +41,39 @@
     <Compile Include="Controls\IconWithLabel.xaml.cs">
       <DependentUpon>IconWithLabel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\FotoDTO.cs" />
     <Compile Include="Models\UserInfoDTO.cs" />
+    <Compile Include="Models\VistoriaDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DashboardService.cs" />
     <Compile Include="Services\Interface\IDashboardService.cs" />
     <Compile Include="Services\Interface\ILoginService.cs" />
     <Compile Include="Services\Interface\IMessageService.cs" />
     <Compile Include="Services\Interface\INavigationService.cs" />
+    <Compile Include="Services\Interface\IVistoriasService.cs" />
     <Compile Include="Services\LoginService.cs" />
     <Compile Include="Services\MessageService.cs" />
     <Compile Include="Services\NavigationService.cs" />
+    <Compile Include="Services\VistoriasService.cs" />
     <Compile Include="ViewModels\DashboardViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\VistoriasFeitasViewModel.cs" />
+    <Compile Include="ViewModels\VistoriasNovasViewModel.cs" />
     <Compile Include="Views\DashboardView.xaml.cs">
       <DependentUpon>DashboardView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VistoriasFeitasView.xaml.cs">
+      <DependentUpon>VistoriasFeitasView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VistoriasNovasView.xaml.cs">
+      <DependentUpon>VistoriasNovasView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VistoriasTabbedView.xaml.cs">
+      <DependentUpon>VistoriasTabbedView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -82,7 +97,12 @@
     <None Include="GettingStarted.Xamarin" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Views\VistoriasTabbedView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\LoginView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -103,6 +123,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Controls\IconWithLabel.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\VistoriasNovasView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\VistoriasFeitasView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

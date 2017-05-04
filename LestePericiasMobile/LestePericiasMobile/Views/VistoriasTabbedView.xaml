@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:LestePericiasMobile.Views;assembly=LestePericiasMobile"
+            x:Class="LestePericiasMobile.Views.VistoriasTabbedView">
+ 
+
+  <NavigationPage Title="Novas Vistorias" Icon="icon.png">
+    <x:Arguments>
+      <local:VistoriasNovasView />
+    </x:Arguments>
+  </NavigationPage>
+  <NavigationPage Title="Minhas Vistorias" Icon="icon.png">
+    <x:Arguments>
+      <local:VistoriasFeitasView />
+    </x:Arguments>
+  </NavigationPage>
+</TabbedPage>

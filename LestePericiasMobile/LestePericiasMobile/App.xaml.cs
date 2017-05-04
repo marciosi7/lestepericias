@@ -26,6 +26,7 @@ namespace LestePericiasMobile
             DependencyService.Register<INavigationService, NavigationService>();
             DependencyService.Register<IMessageService, MessageService>();
             DependencyService.Register<ILoginService, LoginService>();
+            DependencyService.Register<IVistoriasService, VistoriasService>();
         }
     }
 }

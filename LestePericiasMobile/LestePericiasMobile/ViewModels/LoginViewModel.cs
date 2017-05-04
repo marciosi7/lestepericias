@@ -35,7 +35,7 @@ namespace LestePericiasMobile.ViewModels
             }
             set
             {
-                login = value;
+                senha = value;
                 Notify("Senha");
             }
         }

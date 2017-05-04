@@ -36,9 +36,9 @@
             <ColumnDefinition Width="10" />
 
           </Grid.ColumnDefinitions>
-          <components:IconWithLabel Grid.Row="0" Grid.Column="1" Icon="icone_vistorias_add.png" Label="Nova Vistoria"  >
+          <components:IconWithLabel Grid.Row="0" Grid.Column="1" Icon="icone_vistorias_add.png" Label="Novas Vistorias"  >
             <components:IconWithLabel.GestureRecognizers>
-              <TapGestureRecognizer Command="{Binding ToVistoriaCommand}" />
+              <TapGestureRecognizer Command="{Binding ToVistoriasNovasCommand}" />
             </components:IconWithLabel.GestureRecognizers>
           </components:IconWithLabel>
 

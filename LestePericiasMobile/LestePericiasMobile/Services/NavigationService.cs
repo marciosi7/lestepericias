@@ -12,7 +12,6 @@ namespace LestePericiasMobile.Services
 
         public async Task NavigateToDashboard()
         {
-           CleanStack();
            await MainPage.Navigation.PushAsync(new Views.DashboardView());
         }
 
@@ -35,14 +34,9 @@ namespace LestePericiasMobile.Services
             }
         }
 
-        public Task NavigateToNovasVistorias()
+        public async Task NavigateToVistoriasMain()
         {
-            throw new NotImplementedException();
-        }
-
-        public Task NavigateToVistoriasFeitas()
-        {
-            throw new NotImplementedException();
+            await MainPage.Navigation.PushAsync(new Views.VistoriasTabbedView());
         }
 
         public Task NavigateToFaleConosco()
@@ -50,17 +44,12 @@ namespace LestePericiasMobile.Services
             throw new NotImplementedException();
         }
 
-        public Task NavigateToFazerVistoria()
+        public Task NavigateToCriarVistoriaDetail()
         {
             throw new NotImplementedException();
         }
 
-        public Task NavigateToVistoriaDetail()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task NavigateToVistoriaFotoDetail()
+        public Task NavigateToCriarVistoriaFotoDetail()
         {
             throw new NotImplementedException();
         }

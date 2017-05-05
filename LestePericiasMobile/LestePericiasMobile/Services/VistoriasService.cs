@@ -15,14 +15,16 @@ namespace LestePericiasMobile.Services
             {
                 VeiculoNome = "Corolla",
                 VeiculoPlaca = "DBC3351",
-                FoiEnviado = true
+                FoiEnviado = true,
+                Thumbnail = "http://ebaycarsellers.com/1s550e.jpg"
             },
 
             new VistoriaDTO()
             {
                 VeiculoNome = "Siena",
                 VeiculoPlaca = "ABC3050",
-                FoiEnviado = false
+                FoiEnviado = false,
+                Thumbnail = "http://www.benzinsider.com/wp-content/uploads/2011/12/%E2%80%9CHangover%E2%80%9D-Car-Being-Sold-on-Ebay-597x337.jpg"
             },
 
         };

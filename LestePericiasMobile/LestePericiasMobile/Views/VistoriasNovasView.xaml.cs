@@ -15,6 +15,12 @@ namespace LestePericiasMobile.Views
         {
             InitializeComponent();
             BindingContext = new VistoriasNovasViewModel();
+            NavigationPage.SetHasNavigationBar(this, false);
+            listView.ItemSelected += (sender, e) => {
+                ((ListView)sender).SelectedItem = null;
+            };
+
         }
+       
     }
 }

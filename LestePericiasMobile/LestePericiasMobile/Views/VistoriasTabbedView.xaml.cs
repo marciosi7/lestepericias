@@ -10,10 +10,15 @@ namespace LestePericiasMobile.Views
 {
     public partial class VistoriasTabbedView : TabbedPage
     {
-        public VistoriasTabbedView()
+        public VistoriasTabbedView(int index)
         {
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
+            if(Device.OS == TargetPlatform.Android)
+            {
+                NavigationPage.SetHasNavigationBar(this, false);
+            }
+            
+            CurrentPage = Children[index % 2];
         }
     }
 }

@@ -1,22 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LestePericiasMobile.Views.VistoriasNovasView">
+             x:Class="LestePericiasMobile.Views.VistoriasNovasView"
+             BackgroundColor="{StaticResource CorFundoLista}">
   <ContentPage.Content>
-    <ListView  x:Name="listView" ItemsSource="{Binding VistoriasList}">
+    <ListView  x:Name="listView" ItemsSource="{Binding VistoriasList}" HasUnevenRows="True" SeparatorVisibility="None">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
-            <StackLayout BackgroundColor="#eee"
-                         Orientation="Vertical">
-              <StackLayout Orientation="Horizontal">
-                <Label Text="{Binding VeiculoNome}"
-                TextColor="#f35e20" />
-                <Label Text="{Binding VeiculoPlaca}"
-                HorizontalOptions="EndAndExpand"
-                TextColor="#503026" />
+            <Frame Padding="10" Margin="15,5,15,5" HasShadow="True" HeightRequest="100">
+            <StackLayout Orientation="Horizontal">
+              <StackLayout Padding="20,0,0,0" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" Orientation="Vertical">
+                <Image Source="icone_plus.png" Aspect="AspectFit" WidthRequest="42"/>
+              </StackLayout>
+              <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+                <Label Text="{Binding DataCriacao}" TextColor="{StaticResource CorHeaderLista }" FontSize="Medium"/>
+                <Label Text="{Binding VeiculoNome}" TextColor="{StaticResource CorHeaderLista }" FontSize="Small"/>
+                <Label Text="{Binding VeiculoPlaca}" TextColor="{StaticResource CorDescLista }" FontSize="Small"/>
+              </StackLayout>
+              <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="End" Orientation="Vertical">
+                <Image Source="icone_arrow.png" Aspect="AspectFit" WidthRequest="24"/>
               </StackLayout>
             </StackLayout>
+            </Frame>
           </ViewCell>
         </DataTemplate>
       </ListView.ItemTemplate>

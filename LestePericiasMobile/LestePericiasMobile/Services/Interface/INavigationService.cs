@@ -12,7 +12,9 @@ namespace LestePericiasMobile.Services.Interface
 
         void NavigateToLogin();
 
-        Task NavigateToVistoriasMain();
+        Task NavigateToVistoriasNovas();
+
+        Task NavigateToVistoriasFeitas();
 
         Task NavigateToFaleConosco();
 

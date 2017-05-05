@@ -1,6 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LestePericiasMobile.Views.VistoriasFeitasView">
-  
+             x:Class="LestePericiasMobile.Views.VistoriasFeitasView"
+             BackgroundColor="{StaticResource CorFundoLista}">
+  <ListView  x:Name="listView" ItemsSource="{Binding VistoriasList}" HasUnevenRows="True" SeparatorVisibility="None">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <Frame Margin="15,5,15,5" HasShadow="True" Padding="0" HeightRequest="150">
+            <StackLayout Orientation="Horizontal">
+              <StackLayout Padding="0" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Orientation="Vertical">
+                <Image Source="{Binding Thumbnail}"  Aspect="AspectFill" WidthRequest="140" HeightRequest="150" />
+              </StackLayout>
+              <StackLayout  Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+                <Label Text="{Binding DataCriacao, Converter={StaticResource FormatDate}" TextColor="{StaticResource CorHeaderLista }" FontSize="Medium"/>
+                <Label Text="{Binding VeiculoNome}" TextColor="{StaticResource CorHeaderLista }" FontSize="Small"/>
+                <Label Text="{Binding VeiculoPlaca}" TextColor="{StaticResource CorDescLista }" FontSize="Small"/>
+                <Label Text="Não Enviado." TextColor="{StaticResource CorTextoWarning}" FontSize="Small" IsVisible="{Binding FoiEnviado, Converter={StaticResource NegateBoolean}"/>
+              </StackLayout>
+              <StackLayout  VerticalOptions="CenterAndExpand"  Padding="10" HorizontalOptions="End" Orientation="Vertical">
+                <Image Source="icone_arrow.png" Aspect="AspectFit" WidthRequest="24"/>
+              </StackLayout>
+            </StackLayout>
+          </Frame>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
 </ContentPage>

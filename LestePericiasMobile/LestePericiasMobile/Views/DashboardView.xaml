@@ -3,14 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:components="clr-namespace:LestePericiasMobile.Controls;"
              x:Class="LestePericiasMobile.Views.DashboardView">
-
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="80" />
       <RowDefinition Height="*" />
     </Grid.RowDefinitions>
-
-
     <StackLayout  Orientation="Horizontal" Grid.Row="0" Padding="10, 5, 10, 0" HorizontalOptions="FillAndExpand">
         <Label Text="{Binding UserInfo.Nome, StringFormat='Bem vindo, {0:F0}'}" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{StaticResource CorTextoNormal}" />
     </StackLayout>
@@ -34,15 +31,15 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="10" />
-
           </Grid.ColumnDefinitions>
+          
           <components:IconWithLabel Grid.Row="0" Grid.Column="1" Icon="icone_vistorias_add.png" Label="Novas Vistorias"  >
             <components:IconWithLabel.GestureRecognizers>
               <TapGestureRecognizer Command="{Binding ToVistoriasNovasCommand}" />
             </components:IconWithLabel.GestureRecognizers>
           </components:IconWithLabel>
 
-          <components:IconWithLabel Grid.Row="0" Grid.Column="2" Icon="icone_vistorias_feitas.png" Label="Vistorias Feitas"  >
+          <components:IconWithLabel Grid.Row="0" Grid.Column="2" Icon="icone_vistorias_feitas.png" Label="Minhas Vistorias"  >
             <components:IconWithLabel.GestureRecognizers>
               <TapGestureRecognizer Command="{Binding ToVistoriasFeitasCommand}" />
             </components:IconWithLabel.GestureRecognizers>

@@ -1,14 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:LestePericiasMobile.Converters"
              x:Class="LestePericiasMobile.App">
 
   <Application.Resources>
     <ResourceDictionary>
+      <!-- Converters -->
+      <converters:FormatDateConverter x:Key="FormatDate"/>
+      <converters:NegateBooleanConverter x:Key="NegateBoolean"/>
+      
+      <!-- Cores -->
       <Color x:Key="CorTextoNormal">Black</Color>
       <Color x:Key="CorTextoFundoEscuro">White</Color>
-      <Color x:Key="CorTextoSecundaria">Blue</Color>
+      <Color x:Key="CorTextoSecundaria">#777777</Color>
+      <Color x:Key="CorFundoLista">#eeeeee</Color>
       <Color x:Key="CorDestaque">Red</Color>
+      <Color x:Key="CorCelulaLista">White</Color>
+      <Color x:Key="CorHeaderLista">#111111</Color>
+      <Color x:Key="CorDescLista">#777777</Color>
+      <Color x:Key="CorTextoWarning">Red</Color>
     </ResourceDictionary>
   </Application.Resources>
 </Application>

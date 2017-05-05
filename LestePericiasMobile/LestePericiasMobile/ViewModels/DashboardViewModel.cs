@@ -27,13 +27,12 @@ namespace LestePericiasMobile.ViewModels
 
         private async void toVistoriasNovas()
         {
-           await  _navigationService.NavigateToVistoriasMain();
+           await  _navigationService.NavigateToVistoriasNovas();
         }
 
-        private void toVistoriasFeitas()
+        private async void toVistoriasFeitas()
         {
-            // TODO
-
+            await _navigationService.NavigateToVistoriasFeitas();
         }
 
         private void toFaleConosco()

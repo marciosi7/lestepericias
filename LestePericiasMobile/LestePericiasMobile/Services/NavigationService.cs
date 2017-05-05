@@ -34,9 +34,14 @@ namespace LestePericiasMobile.Services
             }
         }
 
-        public async Task NavigateToVistoriasMain()
+        public async Task NavigateToVistoriasNovas()
         {
-            await MainPage.Navigation.PushAsync(new Views.VistoriasTabbedView());
+            await MainPage.Navigation.PushAsync(new Views.VistoriasTabbedView(0));
+        }
+
+        public async Task NavigateToVistoriasFeitas()
+        {
+            await MainPage.Navigation.PushAsync(new Views.VistoriasTabbedView(1));
         }
 
         public Task NavigateToFaleConosco()

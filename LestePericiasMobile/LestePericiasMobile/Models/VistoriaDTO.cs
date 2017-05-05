@@ -13,6 +13,7 @@ namespace LestePericiasMobile.Models
         public string VeiculoPlaca { get; set; }
         public DateTime DataCriacao { get; set; }
         public string Localizacao { get; set; }
+        public string Thumbnail { get; set; }
         public bool FoiEnviado { get; set; }
 
     }

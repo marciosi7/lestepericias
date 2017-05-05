@@ -41,6 +41,8 @@
     <Compile Include="Controls\IconWithLabel.xaml.cs">
       <DependentUpon>IconWithLabel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\FormatDateConverter.cs" />
+    <Compile Include="Converters\NegateBooleanConverter.cs" />
     <Compile Include="Models\FotoDTO.cs" />
     <Compile Include="Models\UserInfoDTO.cs" />
     <Compile Include="Models\VistoriaDTO.cs" />

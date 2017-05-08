@@ -49,14 +49,19 @@ namespace LestePericiasMobile.Services
             throw new NotImplementedException();
         }
 
-        public Task NavigateToCriarVistoriaDetail()
+        public async Task NavigateToVistoriaNovaDetail(Models.VistoriaDTO vistoria)
         {
-            throw new NotImplementedException();
+            await MainPage.Navigation.PushAsync(new Views.VistoriaNovaDetailView(vistoria));
         }
 
         public Task NavigateToCriarVistoriaFotoDetail()
         {
             throw new NotImplementedException();
+        }
+
+        public async Task Back()
+        {
+            await MainPage.Navigation.PopAsync();
         }
     }
 }

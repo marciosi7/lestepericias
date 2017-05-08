@@ -15,10 +15,12 @@ namespace LestePericiasMobile.ViewModels
     {
         public ObservableCollection<VistoriaDTO> VistoriasList { get; set; }
         private readonly Services.Interface.IVistoriasService _vistoriasService;
+        public System.Windows.Input.ICommand VerVistoriaCommand { get; set; }
         public VistoriasNovasViewModel()
         {
             _vistoriasService = DependencyService.Get<IVistoriasService>();
             VistoriasList = new ObservableCollection<VistoriaDTO>();
+            VerVistoriaCommand = new Command<VistoriaDTO>(verVistoria);
             LoadVistorias();
         }
 
@@ -43,6 +45,12 @@ namespace LestePericiasMobile.ViewModels
                 VistoriasList.Add(vistoria);
             }
             Notify("VistoriasList");
+        }
+
+
+        private async void verVistoria(VistoriaDTO vistoria)
+        {
+            await _navigationService.NavigateToVistoriaNovaDetail(vistoria);
         }
     }
 }

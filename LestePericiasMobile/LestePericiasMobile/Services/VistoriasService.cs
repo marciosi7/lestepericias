@@ -15,16 +15,20 @@ namespace LestePericiasMobile.Services
             {
                 VeiculoNome = "Corolla",
                 VeiculoPlaca = "DBC3351",
+                Descricao = "Falar com o Carlos",
+                Endereco = "Avenida Caquito 222",
                 FoiEnviado = true,
-                Thumbnail = "http://ebaycarsellers.com/1s550e.jpg"
+                Thumbnail = "http://i.ebayimg.com/00/s/NTA2WDkwMA==/z/tPoAAOSw6EhUUMHY/$_32.JPG"
             },
 
             new VistoriaDTO()
             {
-                VeiculoNome = "Siena",
+                VeiculoNome = "Galaxy",
                 VeiculoPlaca = "ABC3050",
+                Descricao = "Falar com o Vinicius",
+                Endereco = "Rua Cantagalo 223",
                 FoiEnviado = false,
-                Thumbnail = "http://www.benzinsider.com/wp-content/uploads/2011/12/%E2%80%9CHangover%E2%80%9D-Car-Being-Sold-on-Ebay-597x337.jpg"
+                Thumbnail = "http://www.leftcoastclassics.com/1962-ford-galaxy/extras/bodygallery/slides/1962-ford-galaxy-300.jpg"
             },
 
         };

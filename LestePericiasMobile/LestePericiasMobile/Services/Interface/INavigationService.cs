@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LestePericiasMobile.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,9 +19,9 @@ namespace LestePericiasMobile.Services.Interface
 
         Task NavigateToFaleConosco();
 
-        Task NavigateToCriarVistoriaDetail();
+        Task NavigateToVistoriaNovaDetail(VistoriaDTO vistoria);
 
-        Task NavigateToCriarVistoriaFotoDetail();
+        Task Back();
 
         void CleanStack();
     }

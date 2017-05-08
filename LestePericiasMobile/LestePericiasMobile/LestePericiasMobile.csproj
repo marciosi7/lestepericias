@@ -38,6 +38,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\FontAwesomeIcon.cs" />
     <Compile Include="Controls\IconWithLabel.xaml.cs">
       <DependentUpon>IconWithLabel.xaml</DependentUpon>
     </Compile>
@@ -60,6 +61,7 @@
     <Compile Include="ViewModels\DashboardViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\VistoriaNovaDetailViewModel.cs" />
     <Compile Include="ViewModels\VistoriasFeitasViewModel.cs" />
     <Compile Include="ViewModels\VistoriasNovasViewModel.cs" />
     <Compile Include="Views\DashboardView.xaml.cs">
@@ -67,6 +69,9 @@
     </Compile>
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VistoriaNovaDetailView.xaml.cs">
+      <DependentUpon>VistoriaNovaDetailView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\VistoriasFeitasView.xaml.cs">
       <DependentUpon>VistoriasFeitasView.xaml</DependentUpon>
@@ -137,6 +142,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\VistoriasFeitasView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\VistoriaNovaDetailView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

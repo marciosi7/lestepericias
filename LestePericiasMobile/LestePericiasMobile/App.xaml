@@ -11,15 +11,35 @@
       <converters:NegateBooleanConverter x:Key="NegateBoolean"/>
       
       <!-- Cores -->
+      <Color x:Key="CorPrincipal">#ff8b28</Color>
       <Color x:Key="CorTextoNormal">Black</Color>
       <Color x:Key="CorTextoFundoEscuro">White</Color>
       <Color x:Key="CorTextoSecundaria">#777777</Color>
       <Color x:Key="CorFundoLista">#eeeeee</Color>
-      <Color x:Key="CorDestaque">Red</Color>
       <Color x:Key="CorCelulaLista">White</Color>
       <Color x:Key="CorHeaderLista">#111111</Color>
       <Color x:Key="CorDescLista">#777777</Color>
       <Color x:Key="CorTextoWarning">Red</Color>
+      
+      <!-- Styles -->
+      <Style x:Key="SeparatorHorizontal" TargetType="StackLayout">
+        <Setter Property="BackgroundColor" Value="{StaticResource CorFundoLista}" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HeightRequest" Value="1" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Margin" Value="8" />
+      </Style>
+      <Style TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource CorPrincipal}" />
+        <Setter Property="TextColor" Value="White" />
+      </Style>
+      
+   
+      <!-- Icones fontawesome.io/cheatsheet/ -->
+      <x:String x:Key="fa-asterisk">&#xf069;</x:String>
+      <x:String x:Key="fa-automobile">&#xf1b9;</x:String>
+      <x:String x:Key="fa-calendar">&#xf073;</x:String>
+      <x:String x:Key="fa-map-marker">&#xf041;</x:String>
     </ResourceDictionary>
   </Application.Resources>
 </Application>

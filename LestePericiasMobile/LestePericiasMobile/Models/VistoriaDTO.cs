@@ -26,5 +26,8 @@ namespace LestePericiasMobile.Models
 
         public bool FoiEnviado { get; set; }
 
+        public long IdUsuario { get; set; }
+
+
     }
 }

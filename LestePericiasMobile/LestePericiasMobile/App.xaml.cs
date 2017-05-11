@@ -13,19 +13,7 @@ namespace LestePericiasMobile
 {
     public partial class App : Application
     {
-        static VistoriasDatabase database;
-
-        public static VistoriasDatabase Database
-        {
-            get
-            {
-                if (database == null)
-                {
-                    database = new VistoriasDatabase(DependencyService.Get<IFileHelperDatabase>().GetLocalFilePath("LestePericias.db3"));
-                }
-                return database;
-            }
-        }
+       
 
         public static Models.UserInfoDTO UserInfo { get; set; }
         public App()

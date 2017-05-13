@@ -1,26 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Name="VistoriaPage"
+             xmlns:local="clr-namespace:LestePericiasMobile.Controls;"
              x:Class="LestePericiasMobile.Views.VistoriasNovasView"
              BackgroundColor="{StaticResource CorFundoLista}">
-  <ContentPage.Content>
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+      <Label Text="Novas Vistorias" TextColor="{StaticResource CorTextoFundoEscuro}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="Large" HorizontalTextAlignment="Center"/>
+    </StackLayout>
     <ListView  x:Name="listView" ItemsSource="{Binding VistoriasList}" HasUnevenRows="True" SeparatorVisibility="None">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
-            <Frame Padding="10" Margin="15,5,15,5" HasShadow="True" HeightRequest="100">
+            <Frame Padding="10" Margin="15,5,15,5" HasShadow="True" HeightRequest="100" BackgroundColor="{StaticResource CorFundoListaVistorias}">
             <StackLayout Orientation="Horizontal">
               <StackLayout Padding="20,0,0,0" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" Orientation="Vertical">
-                <Image Source="icone_plus.png" Aspect="AspectFit" WidthRequest="42"/>
+                <local:FontAwesomeIcon  Text="{StaticResource  fa-plus-circle}" FontSize="42" TextColor="{StaticResource CorTextoFundoEscuro }"/>
               </StackLayout>
               <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
-                <Label Text="{Binding DataCriacao}" TextColor="{StaticResource CorHeaderLista }" FontSize="Medium"/>
-                <Label Text="{Binding VeiculoNome}" TextColor="{StaticResource CorHeaderLista }" FontSize="Small"/>
-                <Label Text="{Binding VeiculoPlaca}" TextColor="{StaticResource CorDescLista }" FontSize="Small"/>
+                <Label Text="{Binding DataCriacao}" TextColor="{StaticResource CorPrincipal }" FontSize="Medium"/>
+                <Label Text="{Binding VeiculoNome}" TextColor="{StaticResource CorTextoFundoEscuro }" FontSize="Small"/>
+                <Label Text="{Binding VeiculoPlaca}" TextColor="{StaticResource CorTextoFundoSecundaria }" FontSize="Small"/>
               </StackLayout>
               <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="End" Orientation="Vertical">
-                <Image Source="icone_arrow.png" Aspect="AspectFit" WidthRequest="24"/>
+                <local:FontAwesomeIcon  Text="{StaticResource fa-angle-right}" FontSize="Large" TextColor="{StaticResource CorTextoFundoEscuro }"/>
               </StackLayout>
             </StackLayout>
               <Frame.GestureRecognizers>
@@ -31,5 +34,4 @@
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>
-  </ContentPage.Content>
-</ContentPage>
+</ContentView>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LestePericiasMobile.Views.MainPage"
+             xmlns:local="clr-namespace:LestePericiasMobile.Controls;"
+             BackgroundImage="background_4.png">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="60" />
+    </Grid.RowDefinitions>
+
+    <ContentView x:Name="contentView" Grid.Row="0"/>
+
+    <StackLayout Grid.Row="1" x:Name="Footer" IsVisible="{Binding IsFooterVisible}" Orientation="Horizontal" HorizontalOptions="FillAndExpand" 
+                 VerticalOptions="FillAndExpand"
+                 BackgroundColor="{StaticResource CorBackgroundTransparente}">
+      
+       <local:ButtonFooter Text="{StaticResource fa-novas-vistorias}" HorizontalOptions="CenterAndExpand"
+                           TextActiveColor="{StaticResource CorPrincipal}" IsActive="{Binding IsVistoriasNovasActive}" 
+                           TextIdleColor="{StaticResource CorTextoFundoEscuro}" >
+            <local:ButtonFooter.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding ToVistoriasNovasCommand}" />
+            </local:ButtonFooter.GestureRecognizers>
+      </local:ButtonFooter>
+      
+       <local:ButtonFooter Text="{StaticResource fa-minhas-vistorias}" HorizontalOptions="CenterAndExpand"
+                           TextActiveColor="{StaticResource CorPrincipal}" IsActive="{Binding IsVistoriasFeitasActive}" 
+                           TextIdleColor="{StaticResource CorTextoFundoEscuro}" >
+            <local:ButtonFooter.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding ToVistoriasFeitasCommand}" />
+            </local:ButtonFooter.GestureRecognizers>
+      </local:ButtonFooter>
+      
+      <local:ButtonFooter Text="{StaticResource fa-meus-dados}" HorizontalOptions="CenterAndExpand"
+                          TextActiveColor="{StaticResource CorPrincipal}" IsActive="{Binding IsMeusDadosActive}" 
+                          TextIdleColor="{StaticResource CorTextoFundoEscuro}" >
+            <local:ButtonFooter.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding ToMeusDadosCommand}" />
+            </local:ButtonFooter.GestureRecognizers>
+      </local:ButtonFooter>
+      
+      <local:ButtonFooter Text="{StaticResource fa-fale-conosco}" TextActiveColor="{StaticResource CorPrincipal}" HorizontalOptions="CenterAndExpand"
+                          TextIdleColor="{StaticResource CorTextoFundoEscuro}" IsActive="{Binding IsFaleConoscoActive}" >
+            <local:ButtonFooter.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding ToFaleConoscoCommand}" />
+            </local:ButtonFooter.GestureRecognizers>
+      </local:ButtonFooter>
+
+    
+    </StackLayout>
+  </Grid>
+</ContentPage>

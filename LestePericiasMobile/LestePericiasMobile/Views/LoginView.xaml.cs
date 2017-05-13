@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace LestePericiasMobile.Views
 {
-    public partial class LoginView : ContentPage
+    public partial class LoginView : ContentView
     {
         public LoginView()
         {

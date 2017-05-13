@@ -9,20 +9,21 @@ namespace LestePericiasMobile.Services.Interface
 {
     public interface INavigationService
     {
-        Task NavigateToDashboard();
+        void NavigateToDashboard();
 
         void NavigateToLogin();
 
-        Task NavigateToVistoriasNovas();
+        void NavigateToVistoriasNovas();
 
-        Task NavigateToVistoriasFeitas();
+        void NavigateToVistoriasFeitas();
 
-        Task NavigateToFaleConosco();
+        void NavigateToFaleConosco();
 
-        Task NavigateToVistoriaNovaDetail(VistoriaDTO vistoria);
+        void NavigateToVistoriaNovaDetail(VistoriaDTO vistoria);
 
-        Task Back();
+        void NavigateToMeusDados();
 
-        void CleanStack();
+        void Back();
+
     }
 }

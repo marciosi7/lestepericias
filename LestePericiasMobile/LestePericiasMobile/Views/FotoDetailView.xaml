@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LestePericiasMobile.Controls;"
+             x:Class="LestePericiasMobile.Views.FotoDetailView">
+
+  <ffimageloading:CachedImage HeightRequest="200" Aspect="AspectFill"
+              DownsampleHeight="200" DownsampleUseDipUnits="false"
+              LoadingPlaceholder="image_loading.png" ErrorPlaceholder="image_error.png"
+              Source="{Binding FotoAtual.Source}"/>
+
+  <Label Text="Descrição" FontSize="Small" />
+  <Editor Text="{Binding FotoAtual.Descricao}" />
+  <StackLayout Style="{StaticResource SeparatorHorizontal}" />
+  <Frame HorizontalOptions="FillAndExpand" HasShadow="False" BackgroundColor="Transparent">
+    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+      <local:FontAwesomeIcon Text="{StaticResource fa-calendar}"/>
+      <Label Text="Salvar Foto" FontSize="Small"/>
+    </StackLayout>
+    <Frame.GestureRecognizers>
+      <TapGestureRecognizer Command="{Binding SalvarFotoCommand}" />
+    </Frame.GestureRecognizers>
+ </Frame>
+
+  <Frame HorizontalOptions="FillAndExpand" HasShadow="False" BackgroundColor="Transparent">
+    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+      <local:FontAwesomeIcon Text="{StaticResource fa-calendar}"/>
+      <Label Text="Voltar" FontSize="Small"/>
+    </StackLayout>
+    <Frame.GestureRecognizers>
+      <TapGestureRecognizer Command="{Binding VoltarCommand}" />
+    </Frame.GestureRecognizers>
+  </Frame>
+  
+  <Frame HorizontalOptions="FillAndExpand" HasShadow="False" BackgroundColor="Transparent">
+    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+      <local:FontAwesomeIcon Text="{StaticResource fa-calendar}"/>
+      <Label Text="Excluir Foto" FontSize="Small"/>
+    </StackLayout>
+    <Frame.GestureRecognizers>
+      <TapGestureRecognizer Command="{Binding ExcluirFotoCommand}" />
+    </Frame.GestureRecognizers>
+  </Frame>
+
+
+</ContentView>

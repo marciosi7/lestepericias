@@ -15,8 +15,7 @@
          HorizontalOptions="FillAndExpand"
          Text="{Binding Label}"
          FontSize="Micro"
-             
-         TextColor="{StaticResource CorTextoNormal}"
+         TextColor="{StaticResource CorTextoFundoEscuro}"
          XAlign="Center"/>
 
   </StackLayout>

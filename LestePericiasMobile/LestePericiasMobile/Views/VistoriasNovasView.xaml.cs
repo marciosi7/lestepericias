@@ -9,7 +9,7 @@ using Xamarin.Forms;
 
 namespace LestePericiasMobile.Views
 {
-    public partial class VistoriasNovasView : ContentPage
+    public partial class VistoriasNovasView : ContentView
     {
         public VistoriasNovasView()
         {

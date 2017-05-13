@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace LestePericiasMobile.Models
 {
     [Table("Fotos")]
-    class FotoDTO
+    public class FotoDTO
     {
         [PrimaryKey, AutoIncrement]
         public long IdFoto { get; set; }

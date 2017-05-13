@@ -48,9 +48,9 @@ namespace LestePericiasMobile.ViewModels
         }
 
 
-        private async void verVistoria(VistoriaDTO vistoria)
+        private void verVistoria(VistoriaDTO vistoria)
         {
-            await _navigationService.NavigateToVistoriaNovaDetail(vistoria);
+            _navigationService.NavigateToVistoriaNovaDetail(vistoria);
         }
     }
 }

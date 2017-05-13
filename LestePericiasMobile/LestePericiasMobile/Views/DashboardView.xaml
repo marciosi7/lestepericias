@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:components="clr-namespace:LestePericiasMobile.Controls;"
              x:Class="LestePericiasMobile.Views.DashboardView">
@@ -9,7 +9,8 @@
       <RowDefinition Height="*" />
     </Grid.RowDefinitions>
     <StackLayout  Orientation="Horizontal" Grid.Row="0" Padding="10, 5, 10, 0" HorizontalOptions="FillAndExpand">
-        <Label Text="{Binding UserInfo.Nome, StringFormat='Bem vindo, {0:F0}'}" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{StaticResource CorTextoNormal}" />
+        <Label Text="{Binding UserInfo.Nome, StringFormat='Bem vindo, {0:F0}'}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" 
+               TextColor="{StaticResource CorTextoFundoEscuro}" />
     </StackLayout>
     <StackLayout  Grid.Row="1"
                   HorizontalOptions="CenterAndExpand"
@@ -60,4 +61,4 @@
         </Grid>
     </StackLayout>
   </Grid>
-</ContentPage>
+</ContentView>

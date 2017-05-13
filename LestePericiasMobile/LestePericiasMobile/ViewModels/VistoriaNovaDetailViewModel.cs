@@ -21,9 +21,9 @@ namespace LestePericiasMobile.ViewModels
             ToVoltarCommand = new Command(toVoltar);
         }
 
-        private async void toVoltar()
+        private void toVoltar()
         {
-            await _navigationService.Back();
+            _navigationService.Back();
         }
     }
 }

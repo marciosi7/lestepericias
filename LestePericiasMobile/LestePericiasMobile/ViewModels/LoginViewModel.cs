@@ -63,7 +63,7 @@ namespace LestePericiasMobile.ViewModels
             if (userInfo != null)
             {
                 App.UserInfo = userInfo;
-                await _navigationService.NavigateToDashboard();
+                _navigationService.NavigateToDashboard();
             }
             else
             {

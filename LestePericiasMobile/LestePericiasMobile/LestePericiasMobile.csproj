@@ -38,6 +38,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ButtonFooter.xaml.cs">
+      <DependentUpon>ButtonFooter.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\FontAwesomeIcon.cs" />
     <Compile Include="Controls\IconWithLabel.xaml.cs">
       <DependentUpon>IconWithLabel.xaml</DependentUpon>
@@ -46,6 +49,7 @@
     <Compile Include="Converters\NegateBooleanConverter.cs" />
     <Compile Include="Helpers\IFileHelperDatabase.cs" />
     <Compile Include="Data\VistoriasDatabase.cs" />
+    <Compile Include="Helpers\MessageConstant.cs" />
     <Compile Include="Models\CategoriaDTO.cs" />
     <Compile Include="Models\FotoDTO.cs" />
     <Compile Include="Models\UserInfoDTO.cs" />
@@ -64,16 +68,34 @@
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Services\VistoriasService.cs" />
     <Compile Include="ViewModels\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\FotoDetailViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\VistoriaCategoriaFotosViewModel.cs" />
     <Compile Include="ViewModels\VistoriaNovaDetailViewModel.cs" />
     <Compile Include="ViewModels\VistoriasFeitasViewModel.cs" />
     <Compile Include="ViewModels\VistoriasNovasViewModel.cs" />
     <Compile Include="Views\DashboardView.xaml.cs">
       <DependentUpon>DashboardView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\FaleConoscoView.xaml.cs">
+      <DependentUpon>FaleConoscoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FotoDetailView.xaml.cs">
+      <DependentUpon>FotoDetailView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CategoriaFotosView.xaml.cs">
+      <DependentUpon>CategoriaFotosView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MeusDadosView.xaml.cs">
+      <DependentUpon>MeusDadosView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\VistoriaNovaDetailView.xaml.cs">
       <DependentUpon>VistoriaNovaDetailView.xaml</DependentUpon>
@@ -84,13 +106,22 @@
     <Compile Include="Views\VistoriasNovasView.xaml.cs">
       <DependentUpon>VistoriasNovasView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\VistoriasTabbedView.xaml.cs">
-      <DependentUpon>VistoriasTabbedView.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="DLToolkit.Forms.Controls.FlowListView, Version=1.0.6237.31064, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\DLToolkit.Forms.Controls.FlowListView.2.0.4\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\DLToolkit.Forms.Controls.FlowListView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FFImageLoading, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.2.2.9\lib\portable-net45+win8+wpa81+wp8\FFImageLoading.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.Forms.2.2.9\lib\portable-net45+win8+wpa81+wp8\FFImageLoading.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FFImageLoading.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.2.2.9\lib\portable-net45+win8+wpa81+wp8\FFImageLoading.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Plugin.Media, Version=2.6.2.0, Culture=neutral, processorArchitecture=MSIL">
@@ -134,14 +165,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Views\VistoriasTabbedView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\LoginView.xaml">
@@ -181,6 +207,42 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\VistoriaNovaDetailView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\CategoriaFotosView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\FotoDetailView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ButtonFooter.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\FaleConoscoView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\MeusDadosView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

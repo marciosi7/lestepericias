@@ -22,7 +22,7 @@ namespace LestePericiasMobile.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-           // FlowListView.Init();
+            FlowListView.Init();
             LoadApplication(new App());
         }
 

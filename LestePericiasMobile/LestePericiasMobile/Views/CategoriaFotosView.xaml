@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="LestePericiasMobile.Views.CategoriaFotosView">
+  <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+    <flv:FlowListView SeparatorVisibility="None" HasUnevenRows="true"
+          FlowItemTappedCommand="{Binding ToFotoCommand}" FlowLastTappedItem="{Binding LastTappedFoto}"
+          FlowColumnMinWidth="110" FlowItemsSource="{Binding Fotos}">
+
+      <flv:FlowListView.FlowColumnTemplate>
+        <DataTemplate>
+          <Grid Padding="3">
+
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ffimageloading:CachedImage HeightRequest="80" Aspect="AspectFill"
+              DownsampleHeight="80" DownsampleUseDipUnits="false"
+              LoadingPlaceholder="image_loading.png" ErrorPlaceholder="image_error.png"
+              Source="{Binding Source}"/>
+
+          </Grid>
+        </DataTemplate>
+      </flv:FlowListView.FlowColumnTemplate>
+
+    </flv:FlowListView>
+   
+  </StackLayout>
+</ContentPage>

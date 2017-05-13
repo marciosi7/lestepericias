@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LestePericiasMobile.Views.LoginView">
  <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-    <Entry Placeholder="Usuário" Text="{Binding Login}" WidthRequest="200" />
-    <Entry Placeholder="Senha" Text="{Binding Senha}" WidthRequest="200" IsPassword="True"/>
+    <Entry Placeholder="Usuário" Text="{Binding Login}" WidthRequest="200" TextColor="{StaticResource CorTextoFundoEscuro}" PlaceholderColor="{StaticResource CorTextoFundoSecundaria}" />
+    <Entry Placeholder="Senha" Text="{Binding Senha}" WidthRequest="200" TextColor="{StaticResource CorTextoFundoEscuro}" IsPassword="True" PlaceholderColor="{StaticResource CorTextoFundoSecundaria}"/>
     <Button Text="Login" WidthRequest="200" Command="{Binding TentaLogarCommand}" />
  </StackLayout>
-</ContentPage>
+</ContentView>

@@ -1,6 +1,7 @@
 ﻿using LestePericiasMobile.Helpers;
 using LestePericiasMobile.Services;
 using LestePericiasMobile.Services.Interface;
+using LestePericiasMobile.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,14 +15,16 @@ namespace LestePericiasMobile
     public partial class App : Application
     {
        
-
         public static Models.UserInfoDTO UserInfo { get; set; }
+        public static MainPage NavigationPage { get; private set; }
+
         public App()
         {
             InitializeComponent();
             RegistrarDependencias();
-            this.MainPage = new NavigationPage(new Views.LoginView());
-            
+            NavigationPage = new Views.MainPage(new Views.LoginView());
+            this.MainPage = NavigationPage;
+
         }
 
         private void RegistrarDependencias()

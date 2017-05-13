@@ -1,43 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:LestePericiasMobile.Controls;"
              x:Class="LestePericiasMobile.Views.VistoriaNovaDetailView">
-
-  <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="10" Spacing="5">
-    <StackLayout Margin="0,10,0,30">
-      <Label Text="Olá, Você tem uma nova vistoria" FontSize="Large"/>
-    </StackLayout>
-    <StackLayout Style="{StaticResource SeparatorHorizontal}"></StackLayout>
-    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="5">
-      <local:FontAwesomeIcon Text="{StaticResource fa-automobile}" />
-      <Label TextColor="{StaticResource CorTextoSecundaria}" Text="{Binding Vistoria.VeiculoNome}"/>
-    </StackLayout>
-    <StackLayout Style="{StaticResource SeparatorHorizontal}"></StackLayout>
-    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="5">
-      <local:FontAwesomeIcon Text="{StaticResource fa-asterisk}"/>
-      <Label TextColor="{StaticResource CorTextoSecundaria}" Text="{Binding Vistoria.VeiculoPlaca}"/>
-    </StackLayout>
-    <StackLayout Style="{StaticResource SeparatorHorizontal}"></StackLayout>
-    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="5">
-      <local:FontAwesomeIcon Text="{StaticResource fa-calendar}"/>
-      <Label Text="{Binding Vistoria.DataCriacao}" TextColor="{StaticResource CorTextoSecundaria}" />
-    </StackLayout>
-    <StackLayout Style="{StaticResource SeparatorHorizontal}"></StackLayout>
-    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="5">
-      <local:FontAwesomeIcon Text="{StaticResource fa-map-marker}" />
-      <Label Text="{Binding Vistoria.Endereco}" TextColor="{StaticResource CorTextoSecundaria}"/>
-    </StackLayout>
-    <StackLayout Style="{StaticResource SeparatorHorizontal}"></StackLayout>
-    <Frame BackgroundColor="{StaticResource CorFundoLista}" HasShadow="False">
-      <StackLayout HorizontalOptions="FillAndExpand" HeightRequest="120">
-        <Label Text="{Binding Vistoria.Descricao}" TextColor="{StaticResource CorTextoSecundaria}"/>
+  <ScrollView>
+    <Frame BackgroundColor="{StaticResource CorTranslucidoEscuro}" Margin="10">
+      <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="10" Spacing="5">
+        <StackLayout Margin="0,10,0,30">
+          <Label Text="Olá, Você tem uma nova vistoria" FontSize="Large" TextColor="{StaticResource CorTextoFundoEscuro}"/>
+        </StackLayout>
+        <StackLayout Style="{StaticResource SeparatorHorizontal}"></StackLayout>
+        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="5">
+          <local:FontAwesomeIcon Text="{StaticResource fa-automobile}"  TextColor="{StaticResource CorTextoFundoEscuro}" />
+          <Label TextColor="{StaticResource CorTextoFundoSecundaria}" Text="{Binding Vistoria.VeiculoNome}"/>
+        </StackLayout>
+        <StackLayout Style="{StaticResource SeparatorHorizontal}"></StackLayout>
+        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="5">
+          <local:FontAwesomeIcon Text="{StaticResource fa-asterisk}"  TextColor="{StaticResource CorTextoFundoEscuro}" />
+          <Label TextColor="{StaticResource CorTextoFundoSecundaria}" Text="{Binding Vistoria.VeiculoPlaca}"/>
+        </StackLayout>
+        <StackLayout Style="{StaticResource SeparatorHorizontal}"></StackLayout>
+        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="5">
+          <local:FontAwesomeIcon Text="{StaticResource fa-calendar}" TextColor="{StaticResource CorTextoFundoEscuro}" />
+          <Label Text="{Binding Vistoria.DataCriacao}" TextColor="{StaticResource CorTextoFundoSecundaria}" />
+        </StackLayout>
+        <StackLayout Style="{StaticResource SeparatorHorizontal}"></StackLayout>
+        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Padding="5">
+          <local:FontAwesomeIcon Text="{StaticResource fa-map-marker}" TextColor="{StaticResource CorTextoFundoEscuro}"/>
+          <Label Text="{Binding Vistoria.Endereco}" TextColor="{StaticResource CorTextoFundoSecundaria}"/>
+        </StackLayout>
+        <StackLayout Style="{StaticResource SeparatorHorizontal}"></StackLayout>
+        <Frame BackgroundColor="{StaticResource CorTranslucidoEscuro}" HasShadow="False">
+          <StackLayout HorizontalOptions="FillAndExpand" HeightRequest="80">
+            <Label Text="{Binding Vistoria.Descricao}" TextColor="{StaticResource CorTextoFundoSecundaria}"/>
+          </StackLayout>
+        </Frame>
+        <StackLayout Orientation="Horizontal" Padding="10" >
+          <Button HorizontalOptions="CenterAndExpand" Text="Voltar" Command="{Binding ToVoltarCommand}" />
+          <Button HorizontalOptions="CenterAndExpand" Text="Aceitar" />
+        </StackLayout>
       </StackLayout>
     </Frame>
-    <StackLayout Orientation="Horizontal" >
-      <Button HorizontalOptions="CenterAndExpand" Text="Aceitar" />
-      <Button HorizontalOptions="CenterAndExpand" Text="Voltar" Command="{Binding ToVoltarCommand}" />
-    </StackLayout>
+  </ScrollView>
 
-  </StackLayout>
-</ContentPage>
+</ContentView>

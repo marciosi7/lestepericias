@@ -25,13 +25,6 @@ namespace LestePericiasMobile.Controls
             Text = fontAwesomeIcon;
         }
 
-        /// <summary>
-        /// Get more icons from https://github.com/neilkennedy/FontAwesome.Xamarin/blob/master/FontAwesome.Xamarin/FontAwesome.cs
-        /// </summary>
-        public static class Icon
-        {
-            public static string Search = "\uf002";
-            public static string Plus = "\uf067";
-        }
+       
     }
 }

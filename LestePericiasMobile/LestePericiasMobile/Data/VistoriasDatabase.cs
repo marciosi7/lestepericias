@@ -14,7 +14,7 @@ namespace LestePericiasMobile.Data
         static VistoriasDatabase()
         {
             Db = new SQLiteAsyncConnection(DependencyService.Get<IFileHelperDatabase>().GetLocalFilePath("LestePericias.db3"));
-            Db.CreateTablesAsync<VistoriaDTO, FotoDTO, UserInfoDTO>().Wait();
+            Db.CreateTablesAsync<VistoriaDTO, FotoDTO, CategoriaDTO, UserInfoDTO>().Wait();
         }
     }
 }

@@ -9,8 +9,13 @@
       <!-- Converters -->
       <converters:FormatDateConverter x:Key="FormatDate"/>
       <converters:NegateBooleanConverter x:Key="NegateBoolean"/>
-      
-      <!-- Cores -->
+
+      <!-- Icones fontawesome.io/cheatsheet/ -->
+       <Style x:Key="backGroundPrincipal" TargetType="ContentPage">
+           <Setter Property="BackgroundImage" Value="background_3.png" />
+        </Style>
+
+            <!-- Cores -->
       <Color x:Key="CorPrincipal">#ff8b28</Color>
       <Color x:Key="CorTextoNormal">Black</Color>
       <Color x:Key="CorTextoFundoEscuro">White</Color>
@@ -51,6 +56,6 @@
       <x:String x:Key="fa-meus-dados">&#xf007;</x:String>
       <x:String x:Key="fa-angle-right">&#xf105;</x:String>
       <x:String x:Key="fa-plus-circle">&#xf055;</x:String>
-    </ResourceDictionary>
+     </ResourceDictionary>
   </Application.Resources>
 </Application>

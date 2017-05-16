@@ -14,7 +14,7 @@
     </StackLayout>
     <StackLayout  Grid.Row="1"
                   HorizontalOptions="CenterAndExpand"
-                  VerticalOptions="StartAndExpand"
+                  VerticalOptions="CenterAndExpand"
                   Padding="0,5,0,0"
                   Margin="10">
 
@@ -34,13 +34,13 @@
             <ColumnDefinition Width="10" />
           </Grid.ColumnDefinitions>
           
-          <components:IconWithLabel Grid.Row="0" Grid.Column="1" Icon="icone_vistorias_add.png" Label="Novas Vistorias"  >
+          <components:IconWithLabel Grid.Row="0" Grid.Column="1" Icon="icone_novas_vistorias.png" Label="Novas Vistorias"  >
             <components:IconWithLabel.GestureRecognizers>
               <TapGestureRecognizer Command="{Binding ToVistoriasNovasCommand}" />
             </components:IconWithLabel.GestureRecognizers>
           </components:IconWithLabel>
 
-          <components:IconWithLabel Grid.Row="0" Grid.Column="2" Icon="icone_vistorias_feitas.png" Label="Minhas Vistorias"  >
+          <components:IconWithLabel Grid.Row="0" Grid.Column="2" Icon="icone_minhas_vistorias.png" Label="Minhas Vistorias"  >
             <components:IconWithLabel.GestureRecognizers>
               <TapGestureRecognizer Command="{Binding ToVistoriasFeitasCommand}" />
             </components:IconWithLabel.GestureRecognizers>
@@ -52,7 +52,7 @@
             </components:IconWithLabel.GestureRecognizers>
           </components:IconWithLabel>
 
-          <components:IconWithLabel Grid.Row="1" Grid.Column="2" Icon="icone_user.png" Label="Meus Dados"  >
+          <components:IconWithLabel Grid.Row="1" Grid.Column="2" Icon="icone_meus_dados.png" Label="Meus Dados"  >
             <components:IconWithLabel.GestureRecognizers>
               <TapGestureRecognizer Command="{Binding ToMeusDadosCommand}" />
             </components:IconWithLabel.GestureRecognizers>

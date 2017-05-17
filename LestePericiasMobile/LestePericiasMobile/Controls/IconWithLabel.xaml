@@ -8,8 +8,8 @@
     <Image x:Name="TopIcon"
            HorizontalOptions="Center"
            Source="{Binding Icon}"
-           WidthRequest = "64"
-           HeightRequest = "64"/>
+           WidthRequest = "92"
+           HeightRequest = "92"/>
 
     <Label x:Name="BottomLabel" LineBreakMode="WordWrap"
          HorizontalOptions="FillAndExpand"

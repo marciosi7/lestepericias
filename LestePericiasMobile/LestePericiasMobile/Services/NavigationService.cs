@@ -79,6 +79,10 @@ namespace LestePericiasMobile.Services
             footerStack.Remove(footerStack.Last());
             ChangePage(navigationStack.Last(), footerStack.Last());
         }
-        
+
+        public void NavigateToTesteDB()
+        {
+            ChangePage(new Views.TesteDBView());
+        }
     }
 }

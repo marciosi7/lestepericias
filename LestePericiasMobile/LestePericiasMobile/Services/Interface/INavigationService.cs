@@ -23,6 +23,8 @@ namespace LestePericiasMobile.Services.Interface
 
         void NavigateToMeusDados();
 
+        void NavigateToTesteDB();
+
         void Back();
 
     }

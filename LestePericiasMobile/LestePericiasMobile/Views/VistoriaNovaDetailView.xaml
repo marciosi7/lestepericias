@@ -37,7 +37,8 @@
         </Frame>
         <StackLayout Orientation="Horizontal" Padding="10" >
           <Button HorizontalOptions="CenterAndExpand" Text="Voltar" Command="{Binding ToVoltarCommand}" />
-          <Button HorizontalOptions="CenterAndExpand" Text="Aceitar" />
+          <Button HorizontalOptions="CenterAndExpand" Text="Aceitar" Command="{Binding ToSalvarCommand}"/>
+          <Button HorizontalOptions="CenterAndExpand" Text="GetAll" Command="{Binding ToGetAllCommand}"/>
         </StackLayout>
       </StackLayout>
     </Frame>

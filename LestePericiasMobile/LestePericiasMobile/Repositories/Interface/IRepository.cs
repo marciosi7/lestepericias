@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace LestePericiasMobile.Repositories.Interface
 {
-    interface IRepository<T>
+    interface IRepository<T> 
     {
         Task<List<T>> GetAll(long idUsuario);
 
@@ -18,6 +16,8 @@ namespace LestePericiasMobile.Repositories.Interface
 
 
         Task<int> Delete(T id);
+
+        Task<List<T>> Listar();
         
     }
 }

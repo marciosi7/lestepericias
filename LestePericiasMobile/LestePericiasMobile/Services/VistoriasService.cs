@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using LestePericiasMobile.Models;
+using LestePericiasMobile.Repositories;
+using LestePericiasMobile.Data;
 
 namespace LestePericiasMobile.Services
 {
@@ -33,6 +33,15 @@ namespace LestePericiasMobile.Services
 
         };
 
+        public Task<List<VistoriaDTO>> GetAll(long idUsuario)
+        {
+          //  Task<List<VistoriaDTO>> r = App.Database.GetAll(idUsuario);
+
+            return null;
+
+          
+        }
+
         public List<VistoriaDTO> GetVistoriasFeitasList(long IdUsuario)
         {
             return vistorias;
@@ -41,6 +50,16 @@ namespace LestePericiasMobile.Services
         public List<VistoriaDTO> GetVistoriasNovasList(long IdUsuario)
         {
             return vistorias;
+        }
+
+        //public Task<int> Save(VistoriaDTO obj)
+        //{
+        //   return new VistoriasRepository().Save(obj);
+        //}
+
+        public Task<int> Save(VistoriaDTO obj)
+        {
+            return null;
         }
     }
 }

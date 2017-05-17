@@ -1,8 +1,3 @@
-using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using LestePericiasMobile.Droid;
 using LestePericiasMobile.Helpers;
 using System;

@@ -58,7 +58,13 @@
             </components:IconWithLabel.GestureRecognizers>
           </components:IconWithLabel>
 
-        </Grid>
+                <components:IconWithLabel Grid.Row="2" Grid.Column="2" Icon="icone_user.png" Label="Teste DB"  >
+                    <components:IconWithLabel.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ToTesteDBCommand}" />
+                    </components:IconWithLabel.GestureRecognizers>
+                </components:IconWithLabel>
+
+            </Grid>
     </StackLayout>
   </Grid>
 </ContentView>

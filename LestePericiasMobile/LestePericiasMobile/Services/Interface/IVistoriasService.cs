@@ -1,7 +1,5 @@
-﻿using System;
+﻿using LestePericiasMobile.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace LestePericiasMobile.Services.Interface
@@ -11,5 +9,9 @@ namespace LestePericiasMobile.Services.Interface
         List<Models.VistoriaDTO> GetVistoriasNovasList(long IdUsuario);
 
         List<Models.VistoriaDTO> GetVistoriasFeitasList(long IdUsuario);
+
+        Task<int> Save(VistoriaDTO obj);
+
+        Task<List<VistoriaDTO>> GetAll(long idUsuario);
     }
 }

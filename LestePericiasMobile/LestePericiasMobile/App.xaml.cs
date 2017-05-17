@@ -1,12 +1,6 @@
-﻿using LestePericiasMobile.Helpers;
-using LestePericiasMobile.Services;
+﻿using LestePericiasMobile.Services;
 using LestePericiasMobile.Services.Interface;
 using LestePericiasMobile.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
@@ -34,5 +28,6 @@ namespace LestePericiasMobile
             DependencyService.Register<ILoginService, LoginService>();
             DependencyService.Register<IVistoriasService, VistoriasService>();
         }
+       
     }
 }

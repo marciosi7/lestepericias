@@ -1,9 +1,4 @@
 ﻿using LestePericiasMobile.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -16,14 +11,25 @@ namespace LestePericiasMobile.ViewModels
         public ICommand ToVistoriasFeitasCommand { get; private set; }
         public ICommand ToFaleConoscoCommand { get; private set; }
         public ICommand ToMeusDadosCommand { get; private set; }
+        
+        
+        //Teste DB
+        public ICommand ToTesteDBCommand { get; private set; }
+
         public DashboardViewModel()
         {
             UserInfo = App.UserInfo;
 
             ToVistoriasNovasCommand = new Command(toVistoriasNovas);
             ToVistoriasFeitasCommand = new Command(toVistoriasFeitas);
+            ToTesteDBCommand = new Command(toTesteDB);
         }
 
+
+        private void toTesteDB()
+        {
+            _navigationService.NavigateToTesteDB();
+        }
 
         private void toVistoriasNovas()
         {

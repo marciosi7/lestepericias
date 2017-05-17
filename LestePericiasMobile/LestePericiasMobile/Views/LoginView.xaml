@@ -9,6 +9,6 @@
         <Entry Placeholder="Usuário" Text="{Binding Login}" WidthRequest="200" TextColor="{StaticResource CorTextoFundoEscuro}" PlaceholderColor="{StaticResource CorTextoFundoSecundaria}" />
         <Entry Placeholder="Senha" Text="{Binding Senha}" WidthRequest="200" TextColor="{StaticResource CorTextoFundoEscuro}" IsPassword="True" PlaceholderColor="{StaticResource CorTextoFundoSecundaria}"/>
         <Button Text="Login" WidthRequest="200" Command="{Binding TentaLogarCommand}" />
- 
+
     </StackLayout>
 </ContentView>
